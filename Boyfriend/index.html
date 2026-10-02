@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff5f7" />
+
+  <title>For My Pookie 💌</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Ambient background -->
+  <div class="ambient">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div id="hearts"></div>
+
+  <!-- Main application -->
+  <main id="app">
+
+    <!-- =====================================================
+         SCENE 0 — OPENING
+    ====================================================== -->
+    <section class="scene active" id="scene-opening">
+
+      <div class="opening-content">
+
+        <p class="tiny-label">A little something for you</p>
+
+        <div class="envelope-wrap" id="envelope">
+
+          <div class="envelope-shadow"></div>
+
+          <div class="envelope">
+
+            <div class="envelope-back"></div>
+
+            <div class="letter-preview">
+              <span>For my</span>
+              <strong>pookie ❤️</strong>
+            </div>
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-front"></div>
+
+            <button class="seal" id="openEnvelope" aria-label="Open letter">
+              ❤️
+            </button>
+
+          </div>
+        </div>
+
+        <h1>For my pookie <span>💌</span></h1>
+
+        <p class="opening-sub">
+          I made a tiny little world just for you.
+        </p>
+
+        <button class="primary-btn" id="startBtn">
+          Open it <span>→</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 1 — FIRST HELLO
+    ====================================================== -->
+    <section class="scene locked" id="scene-hello">
+
+      <div class="story-card">
+
+        <div class="chapter-number">01</div>
+
+        <div class="chapter-icon">💌</div>
+
+        <p class="eyebrow">THE BEGINNING</p>
+
+        <h2>First hello <span>💌</span></h2>
+
+        <div class="story-text">
+          <p>
+            I still can’t believe that one simple “hello” from you would become
+            the beginning of something so beautiful. I never knew that a small
+            conversation would bring you into my life and eventually make you
+            such an important part of it.
+          </p>
+
+          <p>
+            Somehow, you became my favourite person, my comfort, and my home.
+            And honestly, I’m so glad I said hello back. ❤️
+          </p>
+        </div>
+
+        <button class="primary-btn next-btn" data-next="scene-confession">
+          And then... <span>→</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 2 — CONFESSION
+    ====================================================== -->
+    <section class="scene locked" id="scene-confession">
+
+      <div class="confession-layout">
+
+        <div class="confession-date">
+          <span>25</span>
+          <small>NOV</small>
+          <span>2024</span>
+        </div>
+
+        <div class="story-card confession-card">
+
+          <div class="chapter-number">02</div>
+
+          <p class="eyebrow">THE MOMENT</p>
+
+          <h2>Confession <span>💗✨</span></h2>
+
+          <button class="date-trigger" id="dateTrigger">
+            <span>25 November 2024</span>
+            <strong>12:31 AM</strong>
+            <small>tap the time</small>
+          </button>
+
+          <div class="story-text hidden-text" id="confessionText">
+
+            <p>
+              25 November 2024, 12:31 AM — a moment I’ll always remember.
+              That’s when you asked me to be my girlfriend, and somehow, that
+              simple question changed so much for me.
+            </p>
+
+            <p>
+              was nervous, happy, and honestly a little shocked, but deep down,
+              I knew I wanted to say yes. And today, I’m just so glad that I did. ❤️
+            </p>
+
+          </div>
+
+          <button class="primary-btn next-btn hidden" id="confessionNext" data-next="scene-puzzle">
+            Wait... there's a question <span>→</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 3 — PUZZLE
+    ====================================================== -->
+    <section class="scene locked" id="scene-puzzle">
+
+      <div class="puzzle-card">
+
+        <div class="puzzle-heart">💗</div>
+
+        <p class="eyebrow">A LITTLE MEMORY CHECK</p>
+
+        <h2>Do you remember? 🥹</h2>
+
+        <p class="puzzle-question">
+          When did you ask me to be your girlfriend?
+        </p>
+
+        <div class="answers">
+
+          <button class="answer" data-correct="false">
+            14 February 2025
+          </button>
+
+          <button class="answer" data-correct="true">
+            25 November 2024 ❤️
+          </button>
+
+          <button class="answer" data-correct="false">
+            25 December 2024
+          </button>
+
+          <button class="answer" data-correct="false">
+            1 January 2025
+          </button>
+
+        </div>
+
+        <p class="puzzle-message" id="puzzleMessage"></p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 4 — MEMORIES
+    ====================================================== -->
+    <section class="scene locked" id="scene-memories">
+
+      <div class="memories-container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">LITTLE PIECES OF US</p>
+
+          <h2>Some memories<br><span>worth keeping forever.</span></h2>
+
+          <p>
+            Tap a photo. Don't worry... I won't let you accidentally skip anything. 🫶🏻
+          </p>
+
+        </div>
+
+        <div class="memory-wall">
+
+          <button class="memory-photo photo-one" data-photo="1">
+            <img src="assets/images/photo-01.jpg" alt="Our memory">
+            <span>that smile ❤️</span>
+          </button>
+
+          <button class="memory-photo photo-two" data-photo="2">
+            <img src="assets/images/photo-02.jpg" alt="Our memory">
+            <span>us 🥹</span>
+          </button>
+
+          <button class="memory-photo photo-three" data-photo="3">
+            <img src="assets/images/photo-03.jpg" alt="Our memory">
+            <span>my favourite</span>
+          </button>
+
+          <button class="memory-photo photo-four" data-photo="4">
+            <img src="assets/images/photo-04.jpg" alt="Our memory">
+            <span>this moment 🫶🏻</span>
+          </button>
+
+          <button class="memory-photo photo-five" data-photo="5">
+            <img src="assets/images/photo-05.jpg" alt="Our memory">
+            <span>hehe ❤️</span>
+          </button>
+
+          <button class="memory-photo photo-six" data-photo="6">
+            <img src="assets/images/photo-06.jpg" alt="Our memory">
+            <span>always us</span>
+          </button>
+
+        </div>
+
+        <button class="primary-btn hidden" id="memoriesNext">
+          There's more... <span>→</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 5 — FIRST KISS
+    ====================================================== -->
+    <section class="scene locked" id="scene-kiss">
+
+      <div class="kiss-card">
+
+        <div class="butterflies">
+          <span>🦋</span>
+          <span>🦋</span>
+          <span>🦋</span>
+        </div>
+
+        <p class="eyebrow">A MOMENT I STILL REMEMBER</p>
+
+        <h2>the day you made me yours ❤️</h2>
+
+        <div class="kiss-photo">
+
+          <img src="assets/images/photo-03.jpg" alt="A special memory">
+
+          <div class="photo-shine"></div>
+
+        </div>
+
+        <div class="story-text">
+
+          <p>
+            The day we shared our first kiss and I finally said yes to being yours. ❤️
+            It was such a small, sweet moment, but somehow it became the beginning
+            of us.
+          </p>
+
+          <p>
+            I still get butterflies thinking about it, cutu. 🥹🫶🏻
+          </p>
+
+        </div>
+
+        <button class="primary-btn next-btn" data-next="scene-argument">
+          One more memory <span>→</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 6 — FIRST ARGUMENT
+    ====================================================== -->
+    <section class="scene locked" id="scene-argument">
+
+      <div class="argument-layout">
+
+        <div class="argument-doodle">
+          <span>💢</span>
+          <span>🥺</span>
+          <span>❤️</span>
+        </div>
+
+        <div class="story-card argument-card">
+
+          <div class="chapter-number">04</div>
+
+          <p class="eyebrow">EVEN THIS ONE MATTERS</p>
+
+          <h2>Our first argument <span>💔🥲</span></h2>
+
+          <div class="argument-envelope" id="sorryEnvelope">
+
+            <div class="mini-envelope">
+              <div class="mini-flap"></div>
+
+              <div class="mini-note">
+                <strong>sorry</strong>
+                <span>tap me 🥺</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="argument-message" id="argumentMessage">
+
+            <p>
+              Our first little argument, and the first time you said “sorry” to me. 🥺❤️
+              It may not have been the happiest moment, but I’ll always remember
+              how you cared enough to make things right.
+            </p>
+
+            <p>
+              Somehow, even our little fights became a part of our story. 🫶🏻
+            </p>
+
+          </div>
+
+          <button class="primary-btn hidden" id="argumentNext" data-next="scene-letter">
+            Open my letter <span>→</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 7 — LOVE LETTER
+    ====================================================== -->
+    <section class="scene locked" id="scene-letter">
+
+      <div class="letter-section">
+
+        <p class="eyebrow">A LETTER I WISH I COULD HAND YOU</p>
+
+        <h2>For my bubuu 💌</h2>
+
+        <div class="love-letter">
+
+          <div class="letter-paper">
+
+            <div class="paper-decoration">♡</div>
+
+            <!-- PAGE 1 -->
+            <div class="letter-page active" data-page="1">
+
+              <span class="page-number">01 / 03</span>
+
+              <h3>My bubuu,</h3>
+
+              <p>
+                I honestly don’t know how to write all of this, but I just want
+                you to know how much you mean to me.
+              </p>
+
+              <p>
+                It’s crazy how one “hello” turned into us. I never thought you’d
+                become such a big part of my life, but now I can’t imagine my
+                days without you.
+              </p>
+
+              <button class="page-next" data-page-next="2">
+                turn the page →
+              </button>
+
+            </div>
+
+            <!-- PAGE 2 -->
+            <div class="letter-page" data-page="2">
+
+              <span class="page-number">02 / 03</span>
+
+              <p>
+                We’ve had our cute moments, stupid fights, endless talks and so
+                many memories.
+              </p>
+
+              <p>
+                I love that we’re not perfect, but we’re still us. And even after
+                everything, I’d still choose you.
+              </p>
+
+              <p>
+                You’re my favourite person, my comfort, and honestly, my home. ❤️
+              </p>
+
+              <div class="page-controls">
+                <button class="page-prev" data-page-prev="1">←</button>
+                <button class="page-next" data-page-next="3">→</button>
+              </div>
+
+            </div>
+
+            <!-- PAGE 3 -->
+            <div class="letter-page" data-page="3">
+
+              <span class="page-number">03 / 03</span>
+
+              <p>
+                Rohan, thank you for loving me, understanding me, annoying me 😂
+                and most importantly, for being there.
+              </p>
+
+              <p>
+                I hope we keep making memories, laughing over stupid things and
+                growing together.
+              </p>
+
+              <p>
+                I love you. More than I probably say.
+              </p>
+
+              <div class="signature">
+                Always yours,<br>
+                <strong>Anchal ❤️</strong>
+              </div>
+
+              <button class="primary-btn letter-finish" id="letterFinish">
+                One last thing... <span>→</span>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 8 — THREE REASONS
+    ====================================================== -->
+    <section class="scene locked" id="scene-reasons">
+
+      <div class="reasons-container">
+
+        <p class="eyebrow">IF YOU EVER FORGET</p>
+
+        <h2>3 Reasons why I love you ❤️</h2>
+
+        <p class="reason-intro">
+          You have to unlock all three. No cheating. 😌
+        </p>
+
+        <div class="reason-grid">
+
+          <button class="reason-card" data-reason="1">
+
+            <span class="reason-number">01</span>
+
+            <div class="locked-heart">♡</div>
+
+            <span class="reason-text">
+              You are my home and my safest place.
+            </span>
+
+          </button>
+
+          <button class="reason-card" data-reason="2">
+
+            <span class="reason-number">02</span>
+
+            <div class="locked-heart">♡</div>
+
+            <span class="reason-text">
+              Never fails to make me feel special.
+            </span>
+
+          </button>
+
+          <button class="reason-card" data-reason="3">
+
+            <span class="reason-number">03</span>
+
+            <div class="locked-heart">♡</div>
+
+            <span class="reason-text">
+              Because you're my Rohan bubu.
+            </span>
+
+          </button>
+
+        </div>
+
+        <button class="primary-btn hidden" id="reasonsNext">
+          Finish our little story <span>→</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 9 — FINAL
+    ====================================================== -->
+    <section class="scene locked" id="scene-final">
+
+      <div class="final-container">
+
+        <div class="final-hearts">
+          <span>♡</span>
+          <span>♥</span>
+          <span>♡</span>
+        </div>
+
+        <p class="eyebrow">AND THAT'S THE WHOLE STORY</p>
+
+        <h2>
+          And somehow…
+          <br>
+          one hello became
+          <br>
+          <span>my favourite story. ❤️</span>
+        </h2>
+
+        <div class="final-photo">
+
+          <img src="assets/images/photo-01.jpg" alt="Our favourite memory">
+
+          <div class="final-photo-overlay">
+            <span>still choosing you.</span>
+          </div>
+
+        </div>
+
+        <p class="final-note">
+          Happy Boyfriend Day, Rohan bubu. 🥹❤️
+        </p>
+
+        <p class="forever">
+          Always yours,
+          <br>
+          <strong>Anchal</strong>
+        </p>
+
+        <button class="restart-btn" id="restartBtn">
+          replay our little story ↻
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       PHOTO LIGHTBOX
+  ====================================================== -->
+
+  <div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" id="lightboxClose">×</button>
+
+    <button class="lightbox-arrow left" id="lightboxPrev">‹</button>
+
+    <div class="lightbox-content">
+
+      <img id="lightboxImage" src="" alt="Memory">
+
+      <p id="lightboxCaption"></p>
+
+    </div>
+
+    <button class="lightbox-arrow right" id="lightboxNext">›</button>
+
+  </div>
+  <div class="made-by">
+    <span>made with</span>
+    <span class="made-heart">♥</span>
+    <span>by</span>
+    <strong>Coding Tantra</strong>
+  </div>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
